@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tienda Online Completa</title>
+    <link rel="stylesheet" href="diseño.css" />
+</head>
+<body >
+
+    <!-- Botón del carrito (ícono) -->
+<button id="toggle-cart-btn" class="cart-toggle">
+  🛒 Carrito
+</button>
+
+<!-- Contenedor del carrito -->
+<div id="cart-container">
+  <h2>Tu Carrito</h2>
+  <div id="cart-items"></div>
+  <p>Total: $<span id="total-price">0.00</span></p>
+  <button id="proceed-payment-btn">Proceder al Pago</button>
+</div>
+
+    
+
+
+
+    
+
+    <header>
+        <div class="container">
+            <h1>Papu Shop</h1>
+            <nav>
+                <ul>
+                    <li><a href="#catalogo-ropa">Ropa</a></li>
+                    <li><a href="#catalogo-Perifericos">Perifericos</a></li>
+                    <li><a href="#catalogo-juguetes">Juguetes</a></li>
+                    <li><a href="#catalogo-hogar">Hogar</a></li>
+                    <li><a href="#catalogo-belleza">Belleza</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+  <button id="toggle-contact-btn">Contáctanos</button>
+
+<div id="contact-container" style="display: none;">
+  <h2>Contáctanos</h2>
+  <form id="contact-form" action="https://formspree.io/f/mjkwddyo" method="POST">
+    <input type="text" name="name" id="name" placeholder="Tu nombre" required><br>
+    <input type="email" name="_replyto" id="email" placeholder="Tu correo" required><br>
+    <textarea name="message" id="message" placeholder="Escribe tu mensaje" required></textarea><br>
+    <button type="submit">Enviar</button>
+  </form>
+  <div id="form-response"></div>
+</div>
+
+
+
+    
+
+    <main class="container">
+
+        <!-- CATÁLOGO ROPA -->
+        <section id="catalogo-ropa" class="catalogo">
+            <h2>Ropa</h2>
+            <div class="product-grid">
+                <div class="product-card" data-id="1" data-name="Camiseta " data-price="25.00">
+                    <img src="img/camiseta.jpg" alt="Camiseta " />
+                    <h3>Camiseta </h3>
+                    <p class="price">$25.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="2" data-name="Pantalón " data-price="45.00">
+                    <img src="img/panttt.webp" alt="Pantalón " />
+                    <h3>Pantalón </h3>
+                    <p class="price">$45.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="3" data-name="Zapatillas Osiris" data-price="70.00">
+                    <img src="img/zapatos.jpg" alt="Zapatillas Osiris" />
+                    <h3>Zapatillas Osiris</h3>
+                    <p class="price">$70.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="4" data-name="Sueter" data-price="120.00">
+                    <img src="img/sueterw.webp" alt="Sueter" />
+                    <h3>Sueter</h3>
+                    <p class="price">$120.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="5" data-name="Gorra" data-price="55.00">
+                    <img src="img/gorrita.webp" alt="Gorra" />
+                    <h3>Gorra</h3>
+                    <p class="price">$55.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="6" data-name="cinturón" data-price="60.00">
+                    <img src="img/correa.webp" alt="cinturón" />
+                    <h3>cinturón</h3>
+                    <p class="price">$60.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="7" data-name="Camisa Manga larga" data-price="38.00">
+                    <img src="img/mangalarga.webp" alt="Camisa Manga larga" />
+                    <h3>Camiseta Manga larga</h3>
+                    <p class="price">$38.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="8" data-name="Pantalones Cortos" data-price="35.00">
+                    <img src="img/pantcorto.webp" alt="Pantalones Cortos" />
+                    <h3>Pantalones Cortos</h3>
+                    <p class="price">$35.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="9" data-name="Bufanda" data-price="20.00">
+                    <img src="img/bufanda.webp" alt="Bufanda" />
+                    <h3>Bufanda </h3>
+                    <p class="price">$20.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="10" data-name="Calcetines" data-price="12.00">
+                    <img src="img/medias.webp" alt="Calcetines" />
+                    <h3>Calcetines</h3>
+                    <p class="price">$12.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATÁLOGO ELECTRÓNICA -->
+        <section id="catalogo-Perifericos" class="catalogo">
+            <h2>Perifericos</h2>
+            <div class="product-grid">
+                <div class="product-card" data-id="11" data-name="Teclado Gamer" data-price="300.00">
+                    <img src="img/teclado.webp" alt="Teclado Gamer" />
+                    <h3>Teclado Gamer</h3>
+                    <p class="price">$300.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="12" data-name="Mouse Gamer" data-price="850.00">
+                    <img src="img/raton.webp" alt="Mouse Gamer" />
+                    <h3>Mouse Gamer</h3>
+                    <p class="price">$850.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="13" data-name="Cascos Gamer" data-price="400.00">
+                    <img src="img/cascos.webp" alt="Cascos Gamer" />
+                    <h3>Cascos Gamer</h3>
+                    <p class="price">$400.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="14" data-name="Auriculares" data-price="80.00">
+                    <img src="img/audifonos.webp" alt="Auriculares" />
+                    <h3>Auriculares</h3>
+                    <p class="price">$80.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="15" data-name="Silla Gamer" data-price="120.00">
+                    <img src="img/silla.webp" alt="Silla Gamer" />
+                    <h3>Silla Gamer</h3>
+                    <p class="price">$120.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="16" data-name="Cámara Digital" data-price="250.00">
+                    <img src="img/camara.webp" alt="Cámara Digital" />
+                    <h3>Cámara Digital</h3>
+                    <p class="price">$250.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="17" data-name="Altavoces Bluetooth" data-price="90.00">
+                    <img src="img/parlantes.webp" alt="Altavoces Bluetooth" />
+                    <h3>Altavoces Bluetooth</h3>
+                    <p class="price">$90.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="18" data-name="Alfombrilla de Ratón" data-price="30.00">
+                    <img src="img/mousepad.webp" alt="Alfombrilla de Ratón" />
+                    <h3>Alfombrilla de Ratón</h3>
+                    <p class="price">$30.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="19" data-name="Ventilador para PC" data-price="60.00">
+                    <img src="img/ventiladorpc.webp" alt="Ventilador para PC" />
+                    <h3>Ventilador para PC</h3>
+                    <p class="price">$60.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="20" data-name="Almohada de cuello" data-price="25.00">
+                    <img src="img/almoahapc.webp" alt="Almohada de cuello" />
+                    <h3>Almohada de cuello</h3>
+                    <p class="price">$25.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATÁLOGO JUGUETES -->
+        <section id="catalogo-juguetes" class="catalogo">
+            <h2>Juguetes</h2>
+            <div class="product-grid">
+                <div class="product-card" data-id="21" data-name="Juego de Lanzador" data-price="35.00">
+                    <img src="img/blaylay.webp" alt="Juego de Lanzador" />
+                    <h3>Juego de Lanzador</h3>
+                    <p class="price">$35.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="22" data-name="Tarjetas Pokemon" data-price="40.00">
+                    <img src="img/tarjetas.webp" alt="Tarjetas Pokemon" />
+                    <h3>Tarjetas Pokemon</h3>
+                    <p class="price">$40.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="23" data-name="Coche RC de Carreras" data-price="25.00">
+                    <img src="img/carro.webp" alt="Coche RC de Carreras" />
+                    <h3>Coche RC de Carreras</h3>
+                    <p class="price">$25.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="24" data-name="Juguete de cocodrilo que muerde" data-price="30.00">
+                    <img src="img/cocodrilo.webp" alt="Juguete de cocodrilo que muerde" />
+                    <h3>Juguete de cocodrilo que muerde</h3>
+                    <p class="price">$30.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="25" data-name="gato banana adorable" data-price="60.00">
+                    <img src="img/gatito.webp" alt="gato banana adorable" />
+                    <h3>gato banana adorable</h3>
+                    <p class="price">$60.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="26" data-name="Pistola de jugete" data-price="90.00">
+                    <img src="img/pistola.webp" alt="Pistola de jugete" />
+                    <h3>Pistola de jugete</h3>
+                    <p class="price">$90.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="27" data-name="Figura de acción" data-price="45.00">
+                    <img src="img/hallo.webp" alt="Figura de acción" />
+                    <h3>Figura de acción</h3>
+                    <p class="price">$45.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="28" data-name="Dron cuadricóptero" data-price="80.00">
+                    <img src="img/dron.webp" alt="Dron cuadricóptero" />
+                    <h3>Dron cuadricóptero</h3>
+                    <p class="price">$80.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="29" data-name="Consola de Juegos Portátil " data-price="50.00">
+                    <img src="img/gameboy.webp" alt="Consola de Juegos Portátil " />
+                    <h3>Consola de Juegos Portátil </h3>
+                    <p class="price">$50.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="30" data-name="mochila de peluche" data-price="35.00">
+                    <img src="img/kity.webp" alt="mochila de peluche" />
+                    <h3>mochila de peluche</h3>
+                    <p class="price">$35.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATÁLOGO HOGAR -->
+        <section id="catalogo-hogar" class="catalogo">
+            <h2>Hogar</h2>
+            <div class="product-grid">
+                <div class="product-card" data-id="31" data-name="Juego de Vajilla" data-price="70.00">
+                    <img src="img/vajilla.webp" alt="Juego de Vajilla" />
+                    <h3>Juego de Vajilla</h3>
+                    <p class="price">$70.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="32" data-name="Lámpara de Mesa" data-price="40.00">
+                    <img src="img/lamp.webp" alt="Lámpara de Mesa" />
+                    <h3>Lámpara de Mesa</h3>
+                    <p class="price">$40.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="33" data-name="Alfombra Decorativa" data-price="55.00">
+                    <img src="img/alfo.webp" alt="Alfombra Decorativa" />
+                    <h3>Alfombra Decorativa</h3>
+                    <p class="price">$55.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="34" data-name="Juego de Sábanas" data-price="60.00">
+                    <img src="img/sabanas.webp" alt="Juego de Sábanas" />
+                    <h3>Juego de Sábanas</h3>
+                    <p class="price">$60.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="35" data-name="Cafetera" data-price="80.00">
+                    <img src="img/cafetera.webp" alt="Cafetera" />
+                    <h3>Cafetera</h3>
+                    <p class="price">$80.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="36" data-name="Tostadora" data-price="45.00">
+                    <img src="img/tosta.webp" alt="Tostadora" />
+                    <h3>Tostadora</h3>
+                    <p class="price">$45.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="37" data-name="Microondas" data-price="100.00">
+                    <img src="img/micro.webp" alt="Microondas" />
+                    <h3>Microondas</h3>
+                    <p class="price">$100.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="38" data-name="Set de Ollas" data-price="90.00">
+                    <img src="img/ollas.webp" alt="Set de Ollas" />
+                    <h3>Set de Ollas</h3>
+                    <p class="price">$90.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="39" data-name="Ventilador" data-price="50.00">
+                    <img src="img/ventilador.webp" alt="Ventilador" />
+                    <h3>Ventilador</h3>
+                    <p class="price">$50.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="40" data-name="Reloj de Pared" data-price="35.00">
+                    <img src="img/relojj.webp" alt="Reloj de Pared" />
+                    <h3>Reloj de Pared</h3>
+                    <p class="price">$35.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATÁLOGO BELLEZA -->
+        <section id="catalogo-belleza" class="catalogo">
+            <h2>Belleza</h2>
+            <div class="product-grid">
+                <div class="product-card" data-id="41" data-name="Perfume" data-price="60.00">
+                    <img src="img/perfume.webp" alt="Perfume" />
+                    <h3>Perfume</h3>
+                    <p class="price">$60.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="42" data-name="Maquillaje Completo" data-price="75.00">
+                    <img src="img/maquillaje.webp" alt="Maquillaje Completo" />
+                    <h3>Maquillaje Completo</h3>
+                    <p class="price">$75.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="43" data-name="Cepillo Facial" data-price="25.00">
+                    <img src="img/cepillof.webp" alt="Cepillo Facial" />
+                    <h3>Cepillo Facial</h3>
+                    <p class="price">$25.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="44" data-name="Crema Hidratante" data-price="40.00">
+                    <img src="img/cream.webp" alt="Crema Hidratante" />
+                    <h3>Crema Hidratante</h3>
+                    <p class="price">$40.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="45" data-name="Set de Brochas" data-price="50.00">
+                    <img src="img/brochas.webp" alt="Set de Brochas" />
+                    <h3>Set de Brochas</h3>
+                    <p class="price">$50.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="46" data-name="Esmalte de Uñas" data-price="15.00">
+                    <img src="img/esmalte.webp" alt="Esmalte de Uñas" />
+                    <h3>Esmalte de Uñas</h3>
+                    <p class="price">$15.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="47" data-name="Mascarilla Facial" data-price="30.00">
+                    <img src="img/masca.webp" alt="Mascarilla Facial" />
+                    <h3>Mascarilla Facial</h3>
+                    <p class="price">$30.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="48" data-name="Secador de Pelo" data-price="40.00">
+                    <img src="img/secador.webp" alt="Secador de Pelo" />
+                    <h3>Secador de Pelo</h3>
+                    <p class="price">$40.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="49" data-name="Espejo de Aumento" data-price="35.00">
+                    <img src="img/espejoo.webp" alt="Espejo de Aumento" />
+                    <h3>Espejo de Aumento</h3>
+                    <p class="price">$35.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+                <div class="product-card" data-id="50" data-name="Spray Fijador" data-price="18.00">
+                    <img src="img/fijador.webp" alt="Spray Fijador" />
+                    <h3>Spray Fijador</h3>
+                    <p class="price">$18.00</p>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+   
+
+        
+
+    
+
+
+  
+
+</form>
+</section>
+
+        </form>
+    </footer>
+   
+
+    <script src="script.js"></script>
+</body>
+</html>
